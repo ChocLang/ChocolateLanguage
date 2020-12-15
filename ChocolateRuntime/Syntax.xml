@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- This syntax file is only for understanding the Chocolate syntax, and is not used anywhere in the code -->
+<!-- See the docs for understanding each statement -->
+
+<!-- <Syntax> Element: Root tag for syntax document -->
+	<!-- No attributes -->
+<!-- <Area> Element: An area where certain statements can be used -->
+	<!-- name: The name of the area -->
+	<!-- required: Whether or not the area is required in the code -->
+	<!-- fixedLocation: Whether or not the statements in the area can be used somewhere else -->
+<!-- <Statement> Element: Any Chocolate statement -->
+	<!-- name: The name of the statement -->
+	<!-- contents (between opening and closing tags): The syntax of the statement -->
+
+<Syntax>
+	<Area name="comments" required="false" fixedLocation="false">
+		<Statement name="comment-single-line">
+			// {comment}
+		</Statement>
+		<Statement name="comment-multiline">
+			/* {comment}
+			   {comment} */
+		</Statement>
+	</Area>
+	<Area name="imports" required="false" fixedLocation="true">
+		<Statement name="import-file">
+			import file {file location}
+		</Statement>
+		<Statement name="import-class">
+			import class {class name}
+		</Statement>
+		<Statement name="import-csharp">
+			import csharp {name}
+		</Statement>
+	</Area>
+	<Area name="class-declaration" required="in-statements" fixedLocation="true">
+		<Statement name="declare-class" required="true">
+			declare class {class name}
+		</Statement>
+	</Area>
+	<Area name="functions" required="false" fixedLocation="false">
+		<Statement name="function">
+			function {function name}({parameters}) {
+				{function contents}
+				return {return value}
+			}
+		</Statement>
+	</Area>
+	<Area name="body" required="false" fixedLocation="true">
+		<Statement name="function-call">
+			{function name}({parameters})
+		</Statement>
+		<Statement name="increment-decrement">
+			{variable name}++ / --
+		</Statement>
+		<Statement name="change-value">
+			{variable name} = {value}
+		</Statement>
+		<Statement name="if">
+			if ({condition}) {
+				{contents}
+			} else {
+				{contents}
+			}
+		</Statement>
+	</Area>
+</Syntax>

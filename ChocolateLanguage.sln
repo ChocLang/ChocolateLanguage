@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChocolateRuntime", "ChocolateRuntime\ChocolateRuntime.csproj", "{8E7BCB65-9061-4F68-986F-9AF8BC1528CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChocolateCLI", "ChocolateCLI\ChocolateCLI.csproj", "{C8CEFE92-CB54-4D60-BA14-072597B5BFCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8E7BCB65-9061-4F68-986F-9AF8BC1528CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E7BCB65-9061-4F68-986F-9AF8BC1528CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E7BCB65-9061-4F68-986F-9AF8BC1528CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8CEFE92-CB54-4D60-BA14-072597B5BFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8CEFE92-CB54-4D60-BA14-072597B5BFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8CEFE92-CB54-4D60-BA14-072597B5BFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8CEFE92-CB54-4D60-BA14-072597B5BFCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

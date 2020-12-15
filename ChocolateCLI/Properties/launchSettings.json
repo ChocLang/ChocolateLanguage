@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ChocolateCLI": {
+      "commandName": "Project",
+      "commandLineArgs": "--run \"C:\\Users\\SAL MAN\\Desktop\\1.choc\""
+    }
+  }
+}

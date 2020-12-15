@@ -1,8 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>F:\ChocolateLanguage\Backup\ChocolateRuntime\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <Authors>Omer B. Hijazi</Authors>
+    <RepositoryType>Github</RepositoryType>
+    <PackageProjectUrl>https://github.com/omerhijazi404/ChocolateLanguage</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/omerhijazi404/ChocolateLanguage</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
-
 </Project>
