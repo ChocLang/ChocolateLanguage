@@ -17,11 +17,6 @@ namespace ChocolateRuntime {
 			for (int i = 0; i < SplitCode.Length; i++) {
 				// Ignore all single-line comments
 				CheckSingleLine(ref i);
-				// Ignore all multiline comments
-				CheckMultiline(ref i);
-				// Ignore all single-line comments again as i may have gotten increased
-				CheckSingleLine(ref i);
-
 				// Lex imports
 				if (SplitCode[i].StartsWith("import")) {
 					string importType;
@@ -31,44 +26,37 @@ namespace ChocolateRuntime {
 						importType = SplitCode[i].Split()[1];
 						importParam = SplitCode[i].Split()[2];
 					} else {
-						return ReturnCodes.CH0004(i + 1);
+						return ReturnCodes.CH0003(i + 1);
 					}
 
 					// Set the import type using string
 					switch (importType) {
 						case "csharp":
-							SplitCode[i] = $"GET CSHARP " + importParam;
+							SplitCode[i] = "GET CSHARP " + importParam;
 							break;
 						case "file":
-							SplitCode[i] = $"GET FILE " + importParam;
+							SplitCode[i] = "GET FILE " + importParam;
 							break;
 						case "class":
-							SplitCode[i] = $"GET CLASS " + importParam;
+							SplitCode[i] = "GET CLASS " + importParam;
 							break;
 						default:
-							return ReturnCodes.CH0005(i + 1, importParam);
+							return ReturnCodes.CH0004(i + 1, importParam);
 					}
+				} else if (SplitCode[i].IndexOf('(') > 0 && SplitCode[i].EndsWith(")")) {
+					string functionName = SplitCode[i].Split('(')[0];
+					string functionParams = SplitCode[i].Substring(SplitCode[i].IndexOf('(') + 1);
+					functionParams = functionParams.Remove(functionParams.Length - 1);
+					SplitCode[i] = $"CALL {functionName} */*/*/{functionParams}";
 				}
 			}
-
 			return ReturnCodes.CH0000;
 		}
 
 		private void CheckSingleLine(ref int index) {
-			if (SplitCode[index].StartsWith("//")) { 
+			if (SplitCode[index].StartsWith("//")) {
+				SplitCode[index] = "COMMENT";
 				index++;
-			}
-		}
-
-		private void CheckMultiline(ref int index) {
-			if (SplitCode[index].StartsWith("/*")) {
-				goto checkMultiline;
-				checkMultiline: if (SplitCode[index].EndsWith("*/")) {
-					index++;
-				} else {
-					index++;
-					goto checkMultiline;
-				}
 			}
 		}
 	}
