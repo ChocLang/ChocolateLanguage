@@ -34,7 +34,7 @@
 			import csharp {name}
 		</Statement>
 	</Area>
-	<Area name="class-declaration" required="in-statements" fixedLocation="true">
+	<Area name="class-declaration" required="false" fixedLocation="true">
 		<Statement name="declare-class" required="true">
 			declare class {class name}
 		</Statement>

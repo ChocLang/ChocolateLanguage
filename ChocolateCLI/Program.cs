@@ -22,7 +22,7 @@ namespace Chocolate {
 
         // Runs appropriately according to the arguments
         static int DoArgs(string[] args) {
-            string v = "1.0.0-alpha";
+            string v = "v0.1.0-alpha";
             foreach (var arg in args) {
                 int i = 0;
                 switch (arg) {
@@ -37,7 +37,7 @@ namespace Chocolate {
                         break;
                     case "--version":
                     case "--v":
-                        Console.WriteLine($"Chocolate Compiler v{v}");
+                        Console.WriteLine($"Chocolate Compiler {v}");
                         break;
                     case "--r":
                     case "--run":
