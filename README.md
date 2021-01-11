@@ -3,10 +3,16 @@
 ## Building Chocolate
 
 Building is only supported on Windows and MacOS, because of Visual Studio.
+But for Linux you may use MonoDevelop to build it, and use mono to run the produced exe. However, that isn't supported and may not work.
+It is in progress.
 
 Open the ChocolateLanguage.sln.
 Press Ctrl+Shift+B.
 Run the ChocolateCli.exe under ChocolateCLI/bin with the necessary parameters.
+
+## Requirements
+
+.NET Core 3.1
 
 ## Using the ChocolateCLI
 
