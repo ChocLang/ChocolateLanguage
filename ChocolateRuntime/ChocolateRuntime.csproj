@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
+    <Version>0.1.0-alpha</Version>
     <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <FileUpgradeFlags>40</FileUpgradeFlags>
