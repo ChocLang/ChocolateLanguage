@@ -1,5 +1,5 @@
 # Chocolate v0.1-alpha
-
+[![Build](https://github.com/ChocLang/ChocolateLanguage/actions/workflows/main.yml/badge.svg)](https://github.com/ChocLang/ChocolateLanguage/actions/workflows/main.yml)
 ## Building Chocolate
 
 Building is only supported on Windows and MacOS, because of Visual Studio.
