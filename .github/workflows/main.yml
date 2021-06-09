@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Build
+        run: |
+          choco install dotnetcore-sdk
+          git clone https://www.github.com/ChocLang/ChocolateLanguage
+          cd ChocolateLanguage
+          cd ChocolateCLI
+          dotnet build
+          cd ..\ChocolateRuntime
+          dotnet build
