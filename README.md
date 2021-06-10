@@ -20,7 +20,7 @@ The CLI parameters are:
 * --version or -v: Shows the compiler version
 * --run or -r {filename}: Runs the code in the console (for text only programs)
 * --compile or -c  {filename}: compiles to an executable (for text programs) (To be added)
-* --compile:graphics or -c:g {filename}: To compile with graphics, using WPF and SharpGL (To be added)
+* --compile:graphics or -c:g {filename}: To compile with graphics, using OpenTK (To be added)
 
 All Chocolate source files end with the .choc extension.
 
