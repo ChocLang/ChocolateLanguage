@@ -2,13 +2,11 @@
 [![Build](https://github.com/ChocLang/ChocolateLanguage/actions/workflows/main.yml/badge.svg)](https://github.com/ChocLang/ChocolateLanguage/actions/workflows/main.yml)
 ## Building Chocolate
 
-Building is only supported on Windows and MacOS, because of Visual Studio.
-But for Linux you may use MonoDevelop to build it, and use mono to run the produced exe. However, that isn't supported and may not work.
-It is in progress.
+Building is supported on Linux, MacOS, and Windows.  
 
-Open the ChocolateLanguage.sln.
-Press Ctrl+Shift+B.
-Run the ChocolateCli.exe under ChocolateCLI/bin with the necessary parameters.
+`cd` into the ChocolateCLI directory, and run:  
+`dotnet build`  
+The build will be located under bin\Debug
 
 ## Requirements
 
