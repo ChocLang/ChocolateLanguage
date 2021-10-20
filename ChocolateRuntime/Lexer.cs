@@ -13,7 +13,7 @@ namespace ChocolateRuntime {
 			// Remove all white spaces to make it easier to lex
 			for (int i = 0; i < SplitCode.Length; i++) { SplitCode[i] = SplitCode[i].Trim(); }
 
-			// Main lex code
+			// Main lexing code
 			for (int i = 0; i < SplitCode.Length; i++) {
 				// Ignore all single-line comments
 				CheckSingleLine(ref i);
