@@ -32,7 +32,7 @@ namespace ChocolateRuntime {
 							break;
 					}
 				} else if (LexedCode[i].StartsWith("CALL")) {
-					// TODO: Parse parameter type and create Type array
+					// TODO: Parse parameter Type and create Type array
 					string paramsUnparsed = LexedCode[i].Split("*/*/*/")[1];
 					object[] _params = paramsUnparsed.Split(" ,, ");
 					object[] finalParams = new object[_params.Length];
