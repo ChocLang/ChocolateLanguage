@@ -26,4 +26,4 @@ All Chocolate source files end with the .choc extension.
 
 ## Documentation
 
-The Chocolate Documentation is currently a work in progress.
+The Chocolate documentation is currently a work in progress.
