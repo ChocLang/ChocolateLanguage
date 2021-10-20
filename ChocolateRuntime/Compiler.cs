@@ -4,7 +4,7 @@ using System.IO;
 namespace ChocolateRuntime {
 
     public class Compiler {
-        // The name of the file to lex
+        // The file to lex
         public string FileName;
 
         public Compiler(string filename) {
