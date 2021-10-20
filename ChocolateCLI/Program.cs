@@ -7,7 +7,7 @@ namespace Chocolate {
 
         static string[] ValidArguments = { "--r", "--run", "--help", "--h", "--compile:graphics", "--c:g", "--compile", "--c", "--version", "--v" };
 
-        // Checks for arguments and sends them to the DoArgs function, and if none, shows an error
+        // Checks for arguments and sends them to the DoArgs method, and if there are none, shows an error
         static int Main(string[] args) {
             if (args.Length == 0) {
                 Console.WriteLine("Error: No argument specified \n");
