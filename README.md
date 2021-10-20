@@ -22,7 +22,7 @@ The CLI parameters are:
 * --compile or -c  {filename}: compiles to an executable (for text programs) (To be added)
 * --compile:graphics or -c:g {filename}: To compile with graphics, using OpenTK (To be added)
 
-All Chocolate source files end with the .choc extension.
+All Chocolate source files should with the .choc extension.
 
 ## Documentation
 
